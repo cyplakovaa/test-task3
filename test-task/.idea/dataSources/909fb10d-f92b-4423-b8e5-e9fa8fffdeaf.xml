@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="polyclinic_db">
+  <database-model serializer="dbm" dbms="HSQLDB" family-id="HSQLDB" format-version="4.19">
+    <root id="1">
+      <ServerVersion>2.3.4</ServerVersion>
+    </root>
+    <database id="2" parent="1" name="PUBLIC">
+      <Current>1</Current>
+    </database>
+    <schema id="3" parent="2" name="INFORMATION_SCHEMA"/>
+    <schema id="4" parent="2" name="PUBLIC">
+      <Current>1</Current>
+    </schema>
+    <schema id="5" parent="2" name="SYSTEM_LOBS"/>
+    <table id="6" parent="4" name="DOCTORS_TBL"/>
+    <table id="7" parent="4" name="PATIENTS_TBL"/>
+    <table id="8" parent="4" name="PRIORITYOFRECIPE_TBL"/>
+    <table id="9" parent="4" name="RECIPES_TBL"/>
+    <column id="10" parent="6" name="DOCTOR_ID">
+      <Position>1</Position>
+      <DataType>BIGINT|-5s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="11" parent="6" name="FIRSTNAME_FLD">
+      <Position>2</Position>
+      <DataType>VARCHAR(45)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="12" parent="6" name="LASTNAME_FLD">
+      <Position>3</Position>
+      <DataType>VARCHAR(45)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="13" parent="6" name="PATRONYMIC_FLD">
+      <Position>4</Position>
+      <DataType>VARCHAR(45)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="14" parent="6" name="SPECIALIZATION_FLD">
+      <Position>5</Position>
+      <DataType>VARCHAR(55)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="15" parent="6" name="SYS_IDX_SYS_PK_10104_10109">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>DOCTOR_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="16" parent="6" name="SYS_PK_10104">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>DOCTOR_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="17" parent="7" name="PATIENT_ID">
+      <Position>1</Position>
+      <DataType>BIGINT|-5s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="18" parent="7" name="FIRSTNAME_FLD">
+      <Position>2</Position>
+      <DataType>VARCHAR(45)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="19" parent="7" name="LASTNAME_FLD">
+      <Position>3</Position>
+      <DataType>VARCHAR(45)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="20" parent="7" name="PATRONYMIC_FLD">
+      <Position>4</Position>
+      <DataType>VARCHAR(45)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="21" parent="7" name="PHONENUMBER_FLD">
+      <Position>5</Position>
+      <DataType>VARCHAR(15)|12s</DataType>
+    </column>
+    <index id="22" parent="7" name="SYS_IDX_SYS_PK_10092_10097">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PATIENT_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="23" parent="7" name="SYS_IDX_SYS_CT_10096_10102">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PHONENUMBER_FLD</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="24" parent="7" name="SYS_PK_10092">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PATIENT_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="25" parent="7" name="SYS_IDX_SYS_CT_10096_10102">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PHONENUMBER_FLD</ColNames>
+    </key>
+    <column id="26" parent="8" name="PRIORITY_ID">
+      <Position>1</Position>
+      <DataType>BIGINT|-5s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="27" parent="8" name="PRIORITYNAME_FLD">
+      <Position>2</Position>
+      <DataType>VARCHAR(20)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="28" parent="8" name="SYS_IDX_SYS_PK_10116_10119">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PRIORITY_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="29" parent="8" name="SYS_IDX_SYS_CT_10118_10122">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PRIORITYNAME_FLD</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="30" parent="8" name="SYS_PK_10116">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PRIORITY_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="31" parent="8" name="SYS_IDX_SYS_CT_10118_10122">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PRIORITYNAME_FLD</ColNames>
+    </key>
+    <column id="32" parent="9" name="RECIPE_ID">
+      <Position>1</Position>
+      <DataType>BIGINT|-5s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="33" parent="9" name="DESCRIPTION_FLD">
+      <Position>2</Position>
+      <DataType>VARCHAR(800)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="34" parent="9" name="PATIENT_ID_FLD">
+      <Position>3</Position>
+      <DataType>BIGINT|-5s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="35" parent="9" name="DOCTOR_ID_FLD">
+      <Position>4</Position>
+      <DataType>BIGINT|-5s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="36" parent="9" name="CREATIONDATE_FLD">
+      <Position>5</Position>
+      <DataType>DATE|91s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="37" parent="9" name="VALIDITY_FLD">
+      <Position>6</Position>
+      <DataType>INTEGER|4s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="38" parent="9" name="PRIORITY_ID_FLD">
+      <Position>7</Position>
+      <DataType>BIGINT|-5s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="39" parent="9" name="SYS_IDX_SYS_PK_10124_10131">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>RECIPE_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="40" parent="9" name="SYS_IDX_10139">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PATIENT_ID_FLD</ColNames>
+    </index>
+    <index id="41" parent="9" name="SYS_IDX_10141">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>DOCTOR_ID_FLD</ColNames>
+    </index>
+    <index id="42" parent="9" name="SYS_IDX_10143">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PRIORITY_ID_FLD</ColNames>
+    </index>
+    <key id="43" parent="9" name="SYS_PK_10124">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>RECIPE_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="44" parent="9" name="RECIPE_PATIENT_FK">
+      <ColNames>PATIENT_ID_FLD</ColNames>
+      <RefTableName>PATIENTS_TBL</RefTableName>
+      <RefKeyName>SYS_PK_10092</RefKeyName>
+      <RefColNames>PATIENT_ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="45" parent="9" name="RECIPE_DOCTOR_FK">
+      <ColNames>DOCTOR_ID_FLD</ColNames>
+      <RefTableName>DOCTORS_TBL</RefTableName>
+      <RefKeyName>SYS_PK_10104</RefKeyName>
+      <RefColNames>DOCTOR_ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="46" parent="9" name="RECIPE_PRIORITY_FK">
+      <ColNames>PRIORITY_ID_FLD</ColNames>
+      <RefTableName>PRIORITYOFRECIPE_TBL</RefTableName>
+      <RefKeyName>SYS_PK_10116</RefKeyName>
+      <RefColNames>PRIORITY_ID</RefColNames>
+    </foreign-key>
+  </database-model>
+</dataSource>

@@ -1,0 +1,7 @@
+com/haulmont/testtask/ui/RecipesTableView.class
+com/haulmont/testtask/ui/StartPageView.class
+com/haulmont/testtask/ui/DoctorsTableView.class
+com/haulmont/testtask/ui/DoctorFormWindow.class
+com/haulmont/testtask/Database/DbException.class
+com/haulmont/testtask/ui/PatientsTableView.class
+com/haulmont/testtask/ui/PatientFormWindow.class
